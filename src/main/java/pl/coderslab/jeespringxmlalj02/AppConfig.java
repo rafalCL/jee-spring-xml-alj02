@@ -2,6 +2,11 @@ package pl.coderslab.jeespringxmlalj02;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Service;
+import pl.coderslab.jeespringxmlalj02.zad3.MessageSender;
+import pl.coderslab.jeespringxmlalj02.zad3.MessageService;
+import pl.coderslab.jeespringxmlalj02.zad3.SmsService;
 
 @Configuration
 public class AppConfig {
@@ -20,5 +25,21 @@ public class AppConfig {
         Hello result = new Hello();
         result.setHelloText("Hola Amigo,");
         return result;
+    }
+
+    @Bean
+    public MessageSender senderBean() {
+        return new MessageSender(smsServiceBean());
+    }
+
+    @Bean
+    public MessageService smsServiceBean() {
+        return new SmsService();
+    }
+
+    @Bean
+    @Scope("prototype")
+    public Hello helloWorldPrototype() {
+        return new Hello();
     }
 }

@@ -11,5 +11,10 @@ public class HelloWorldApplication2 {
 
         Hello ac3 = ac2.getBean("myHelloBean2", Hello.class);
         ac3.sayHello("Arthur");
+
+        Hello h1 = ac2.getBean("helloWorldPrototype", Hello.class);
+        System.out.println(h1.toString());
+        Hello h2 = ac2.getBean("helloWorldPrototype", Hello.class);
+        System.out.println(h2.toString());
     }
 }
