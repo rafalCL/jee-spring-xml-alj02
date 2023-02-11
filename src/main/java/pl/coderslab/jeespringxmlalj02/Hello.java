@@ -3,6 +3,10 @@ package pl.coderslab.jeespringxmlalj02;
 public class Hello {
     private final String helloText;
 
+    public Hello() {
+        this.helloText = "Hi,";
+    }
+
     public Hello(String helloText) {
         this.helloText = helloText;
     }
