@@ -17,4 +17,12 @@
         <property name="helloText" value="Siema"/>
     </bean>
 
+    <bean id="emailService" class="pl.coderslab.jeespringxmlalj02.zad3.EmailService"/>
+
+    <bean id="smsService" class="pl.coderslab.jeespringxmlalj02.zad3.SmsService"/>
+
+    <bean id="emailMessageSender" class="pl.coderslab.jeespringxmlalj02.zad3.MessageSender">
+        <constructor-arg name="service" ref="emailService"/>
+    </bean>
+
 </beans>
