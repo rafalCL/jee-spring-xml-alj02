@@ -23,5 +23,8 @@ public class HelloWorldApplication {
 
         Hello helloBean2prim = ac.getBean("hello2", Hello.class);
         System.out.println(helloBean2prim.toString());
+
+        Hello hello4 = ac.getBean("hello4", Hello.class);
+        hello4.sayHello("Arthur");
     }
 }

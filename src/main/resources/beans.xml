@@ -13,4 +13,8 @@
         <constructor-arg name="helloText" value="Cześć"/>
     </bean>
 
+    <bean id="hello4" class="pl.coderslab.jeespringxmlalj02.Hello">
+        <property name="helloText" value="Siema"/>
+    </bean>
+
 </beans>
