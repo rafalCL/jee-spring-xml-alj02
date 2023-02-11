@@ -4,4 +4,9 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="hello" class="pl.coderslab.jeespringxmlalj02.Hello"></bean>
+
+    <bean id="hello2" class="pl.coderslab.jeespringxmlalj02.Hello">
+        <constructor-arg name="helloText" value="Hello"/>
+    </bean>
+
 </beans>

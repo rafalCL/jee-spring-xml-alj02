@@ -11,7 +11,17 @@ public class HelloWorldApplication {
 //        hw.sayHello("Dave");
 
         ApplicationContext ac = new ClassPathXmlApplicationContext("beans.xml");
+
+
         Hello helloBean = ac.getBean("hello", Hello.class);
         helloBean.sayHello("HAL");
+        System.out.println(helloBean.toString());
+
+        Hello helloBean2 = ac.getBean("hello2", Hello.class);
+        helloBean.sayHello("Dave");
+        System.out.println(helloBean2.toString());
+
+        Hello helloBean2prim = ac.getBean("hello2", Hello.class);
+        System.out.println(helloBean2prim.toString());
     }
 }
